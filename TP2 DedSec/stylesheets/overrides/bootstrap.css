@@ -1,0 +1,77 @@
+:root {
+    --bs-border-width:0px;
+    
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.underline {
+  border-bottom: #fff;
+}
+
+input {
+    font-family: monospace;
+    color: #fff;
+    opacity: 1;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+   .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+   }
+
+   .loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-out 5s ease forwards;
+    pointer-events: none;
+  }
+  
+  .loading img {
+    width: 100%;
+    height: 100%;
+    animation: wait 5s ease infinite;
+  }
+  
+  @keyframes wait {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      display: flex;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+
+.loading.fade-out-end {
+    display: none; /* Add this block */
+  }
+  
+  
